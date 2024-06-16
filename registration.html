@@ -10,19 +10,28 @@
     <div class="container">
       <h1>Register Yourself</h1>
       <form id="register-form">
+        <label for="name">ENTER NAME</label>
+        <input type="text" name="Name" id="name" required />
+
         <label for="email">Enter Email</label>
         <input type="email" name="Email" id="email" required />
-        
+
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" required />
-        
+        <div class="password-section">
+          <input type="password" name="password" id="password" required />
+          <img id="Ehide" style="cursor: pointer;"   class="hide" src="./assets/download.png" alt="">
+          <img id="Eshow" style="cursor: pointer;" src="./assets/download (1).png" alt="">
+        </div>
         <label for="cnf">Confirm Password</label>
-        <input type="password" name="cnf" id="cnf" required />
         
+        <div class="password-section">
+          <input type="password" name="cnf" id="cnf" required />
+          <img id="Chide" style="cursor: pointer;"   class="hide" src="./assets/download.png" alt="">
+          <img id="Cshow" style="cursor: pointer;" src="./assets/download (1).png" alt="">
+        </div>  
         <button type="submit" id="submit">Submit</button>
-        
+
         <div class="options">
-        
           <a href="login.html" id="sign-in">Sign In</a>
         </div>
       </form>

@@ -1,0 +1,84 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://happay.com/blog/wp-content/uploads/sites/12/2022/07/what-is-expense-report-and-how-to-create.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    animation: fadeInDown 2s;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #ffcc00;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    animation: fadeInUp 2s;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin: 0;
+    background: linear-gradient(red,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

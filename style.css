@@ -8,6 +8,7 @@ body {
     margin: 0;
     overflow: hidden;
     min-width: 476px;
+    background-image: url("https://img.freepik.com/free-vector/realistic-design-technology-background_23-2148426705.jpg?size=626&ext=jpg");
   }
   
   .container {
@@ -46,7 +47,8 @@ body {
   }
   
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="text"] {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -57,12 +59,15 @@ body {
   }
   
   input[type="email"]:hover,
-  input[type="password"]:hover {
+  input[type="password"]:hover
+  input[type="text"]:hover
+   {
     border-color: #777;
   }
   
   input[type="email"]:focus,
-  input[type="password"]:focus {
+  input[type="password"]:focus
+  input[type="text"]:focus {
     border-color: #333;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     outline: none;
@@ -101,4 +106,17 @@ body {
   .options a:hover {
     color: #2575fc;
   }
-  
+  .password-section{
+      display: flex;
+      height: 60px;
+      position: relative;
+  }
+  .password-section img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+  }
+  .hide{
+    display: none;
+  }
