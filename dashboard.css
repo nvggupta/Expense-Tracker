@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: space-between;
+}
+
+.logo h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 20px 0;
+    
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #1abc9c;
+}
+
+.sidebar-bottom {
+    padding-bottom: 20px;
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 200px;
+    padding: 5px;
+}
+
+.user-info span {
+    font-weight: bold;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.balance {
+    grid-column: span 2;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.balance h2 {
+    margin-bottom: 10px;
+}
+
+.balance-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.charts {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart {
+    width: 48%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.budget-folder {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.budget-folder ul {
+    list-style-type: none;
+}
+
+.budget-folder li {
+    margin-bottom: 10px;
+}
+
+.category-history {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.category-history th, .category-history td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.category-history th {
+    background-color: #f4f4f4;
+}

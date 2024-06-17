@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>BudgetBuddy</h1>
+                <ul class="menu">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="budget.html">Budget</a></li>
+                    <li><a href="#">Report</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-bottom">
+                <ul class="menu">
+                    <li><a href="setting.html">Settings</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main-content">
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="user-info">
+                    <span>Admin</span>
+                </div>
+            </header>
+            <div class="dashboard">
+                <div class="balance">
+                    <h2>Current Balance</h2>
+                    <button id="Add-income">Add Income</button>
+                    <div class="balance-info">
+                        <div>Total Income: N210,000.00</div>
+                        <div>Total Spending: N110,402.09</div>
+                        <div>Total Savings: N90,120.30</div>
+                    </div>
+                </div>
+                <div class="charts">
+                    <div class="chart" id="bar-chart">
+                        <!-- Bar chart goes here -->
+                    </div>
+                    <div class="chart" id="pie-chart">
+                        <!-- Pie chart goes here -->
+                    </div>
+                </div>
+                <div class="budget-folder">
+                    <h2>Budget Folder</h2>
+                    <ul>
+                        <li>Personal Needs - April, 2024</li>
+                        
+                    </ul>
+                </div>
+                <div class="category-history">
+                    <h2>Category History</h2>
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td>22/04/24</td>
+                            <td>Beans And Yam</td>
+                            <td>N1,400</td>
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

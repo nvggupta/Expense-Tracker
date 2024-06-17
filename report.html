@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Report</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>CASHFLOW</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="report.html" class="active">Report</a></li>
+            </ul>
+            <div class="sidebar-bottom">
+                <ul class="menu">
+                    <li><a href="setting.html">Settings</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main-content">
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="user-info">
+                    <span>Admin</span>
+                </div>
+            </header>
+            <div class="report">
+                <h2>Expense Report</h2>
+                <div class="report-header">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="actions">
+                        <button class="export">Export</button>
+                        <select>
+                            <option>January - April</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="income-details">
+                    <h3>Income Details</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Total Income</th>
+                                <th>Total Expenses</th>
+                                <th>Calculated Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>April 2024</td>
+                                <td>N210,000</td>
+                                <td>N110,000</td>
+                                <td>N100,000</td>
+                            </tr>
+                            <tr>
+                                <td>March 2024</td>
+                                <td>N210,000</td>
+                                <td>N110,000</td>
+                                <td>N100,000</td>
+                            </tr>
+                            <tr>
+                                <td>February 2024</td>
+                                <td>N210,000</td>
+                                <td>N110,000</td>
+                                <td>N100,000</td>
+                            </tr>
+                            <tr>
+                                <td>January 2024</td>
+                                <td>N210,000</td>
+                                <td>N110,000</td>
+                                <td>N100,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <span>&laquo;</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>&raquo;</span>
+                    </div>
+                </div>
+                <div class="category-history">
+                    <h3>Category History</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Food</td>
+                                <td>Feeding</td>
+                                <td>N100,000</td>
+                            </tr>
+                            <tr>
+                                <td>Food</td>
+                                <td>Feeding</td>
+                                <td>N100,000</td>
+                            </tr>
+                            <tr>
+                                <td>Food</td>
+                                <td>Feeding</td>
+                                <td>N100,000</td>
+                            </tr>
+                            <tr>
+                                <td>Food</td>
+                                <td>Feeding</td>
+                                <td>N100,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <span>&laquo;</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>&raquo;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

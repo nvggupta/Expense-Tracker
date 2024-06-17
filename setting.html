@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="setting.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>CASHFLOW</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="report.html">Report</a></li>
+            </ul>
+            <div class="sidebar-bottom">
+                <ul class="menu">
+                    <li><a href="setting.html" class="active">Settings</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main-content">
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="user-info">
+                    <span>Admin</span>
+                </div>
+            </header>
+            <div class="settings">
+                <h2>Settings</h2>
+                <div class="account-settings">
+                    <h3>Account Settings</h3>
+                    <div class="setting">
+                        <label>Email Address</label>
+                        <input type="email" value="you@example.com" disabled>
+                        <button class="change-button">Change Email</button>
+                    </div>
+                    <div class="setting">
+                        <label>Password</label>
+                        <input type="password" placeholder="Set Up Permanent Password To Login Into Your Account">
+                        <button class="change-button">Change Password</button>
+                    </div>
+                </div>
+                <div class="date-time">
+                    <h3>Date And Time</h3>
+                    <div class="setting">
+                        <label>Set Time Zone To Location</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="support">
+                    <h3>Support</h3>
+                    <div class="setting">
+                        <button class="logout-button">Logout</button>
+                    </div>
+                    <div class="setting">
+                        <button class="delete-button">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
