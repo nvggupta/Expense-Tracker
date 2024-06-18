@@ -1,110 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
-</head>
-<body>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
     <div class="container">
-        <nav class="sidebar">
-            <div class="logo">
-                <h1>BudgetBuddy</h1>
-                <ul class="menu">
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="budget.html">Budget</a></li>
-                    <li><a href="#">Report</a></li>
-                </ul>
-            </div>
-            
-            <div class="sidebar-bottom">
-                <ul class="menu">
-                    <li><a href="setting.html">Settings</a></li>
-                    <li><a href="login.html">Log out</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="main-content">
-            <header>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search">
-                </div>
-                <div class="user-info">
-                    <span>Admin</span>
-                </div>
-            </header>
-            <div class="dashboard">
-                <div class="balance">
-                    <h2>Current Balance</h2>
-                    <button id="Add-income">Add Income</button>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>Create Folder</h2>
-                            <span class="close-button">&times;</span>
-                        </div>
-                        <form>
-                            <div class="form-group">
-                                <label for="folder-name">Folder Name</label>
-                                <input type="text" id="folder-name" placeholder="Enter Folder Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="total-income">Total Income</label>
-                                <input type="number" id="total-income" placeholder="Enter Total Income">
-                            </div>
-                            <div class="form-group">
-                                <label for="select-month">Select Month</label>
-                                <select id="select-month">
-                                    <option value="" disabled selected>Select Month</option>
-                                    <option value="january">January</option>
-                                    <option value="february">February</option>
-                                    <!-- Add other months as options here -->
-                                </select>
-                            </div>
-                            <button id="btn" type="submit">Create</button>
-                        </form>
-                    </div>
-                    <div class="balance-info">
-                        <div>Total Income: N210,000.00</div>
-                        <div>Total Spending: N110,402.09</div>
-                        <div>Total Savings: N90,120.30</div>
-                    </div>
-                </div>
-                <div class="charts">
-                    <div class="chart" id="bar-chart">
-                        <!-- Bar chart goes here -->
-                    </div>
-                    <div class="chart" id="pie-chart">
-                        <!-- Pie chart goes here -->
-                    </div>
-                </div>
-                <div class="budget-folder">
-                    <h2>Budget Folder</h2>
-                    <ul>
-                        <li>Personal Needs - April, 2024</li>
-                        
-                    </ul>
-                </div>
-                <div class="category-history">
-                    <h2>Category History</h2>
-                    <table>
-                        <tr>
-                            <th>Category</th>
-                            <th>Date</th>
-                            <th>Description</th>
-                            <th>Amount</th>
-                        </tr>
-                        <tr>
-                            <td>Food</td>
-                            <td>22/04/24</td>
-                            <td>Beans And Yam</td>
-                            <td>N1,400</td>
-                        </tr>
-                       
-                    </table>
-                </div>
-            </div>
+      <nav class="sidebar">
+        <div class="logo">
+         <a style="text-decoration: none;" href="index.html"><h1>BudgetBuddy</h1></a> 
+          <ul class="menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="budget.html">AI Support</a></li>
+            <li><a href="report.html">Tax Calculation</a></li>
+          </ul>
         </div>
+        <div class="sidebar-bottom">
+          <ul class="menu">
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="login.html">Log out</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="main-content">
+        <header>
+          <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- <div class="search-bar">
+            <input type="text" placeholder="Search" /> -->
+          <!-- </div>
+          <div class="user-info">
+            <span>Admin</span>
+          </div> -->
+        </header>
+        <div class="container1">
+          <div class="dashboard">
+            <div id="inex">
+              <div class="balance" id="inc">
+                <h2>Current Balance</h2>
+                <button id="Add-income">Add Income</button>
+                <div class="card" id="income-card">
+                  <div class="card-header">
+                    <h2>Add INCOME</h2>
+                    <span
+                      style="cursor: pointer"
+                      id="closeIn"
+                      class="close-button"
+                      >&times;</span
+                    >
+                  </div>
+                  <form id="F1">
+                    <div class="form-group">
+                      <label for="folder-name">Income Source</label>
+                      <input
+                        type="text"
+                        id="income-source"
+                        placeholder="Income Source"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="total-income">Total Income</label>
+                      <input
+                        type="number"
+                        id="total-income"
+                        placeholder="Enter Total Income"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="date">Select Date</label>
+                      <input type="date" name="date" id="dateIn" required />
+                    </div>
+                    <button id="createInc">Add Income</button>
+                  </form>
+                </div>
+
+                <div class="balance-info">
+                  <div>
+                    Total Income:<span style="color: blue" id="Savings"></span>
+                  </div>
+                  <div>
+                    Total Spending:
+                    <span style="color: red" id="spending"></span>
+                  </div>
+                  <div>
+                    Total Savings:
+                    <span style="color: green" id="total"></span> 
+                  </div>
+                </div>
+              </div>
+              <div id="exp" class="balance">
+                <h2>Add Expenses</h2>
+                <button id="Expence">Add Expense</button>
+                <div class="card" id="expense-card">
+                  <div class="card-header">
+                    <h2>Create Folder</h2>
+                    <span
+                      style="cursor: pointer"
+                      id="closeEx"
+                      class="close-button"
+                      >&times;</span
+                    >
+                  </div>
+                  <form>
+                    <div class="form-group">
+                      <label for="folder-name">Expense Item</label>
+                      <input
+                        type="text"
+                        id="Expence-item"
+                        placeholder="Expense Item"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="total-income">Total Amount</label>
+                      <input
+                        type="number"
+                        id="expense-am"
+                        placeholder="Enter Total Amount"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="date">Select Date</label>
+                      <input type="date" name="date" id="exDate" required />
+                    </div>
+                    <button id="createEx">Add Expenses</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="charts">
+              <div class="chart" id="bar-chart">
+                <canvas id="myChart" width="400" height="400"></canvas>
+              </div>
+              <div class="chart" id="pie-chart">
+                <canvas id="myPieChart" width="400" height="400"></canvas>
+              </div>
+            </div>
+            <div class="history-expenses">
+              <div class="budget-folder">
+                <h2>Expense-Items</h2>
+                <ul id="expenseItem">
+                  <li>
+                    <span style="font-weight: bolder">Name</span>
+                    <span style="font-weight: bolder">Amount</span>
+                    <span style="font-weight: bolder">Date</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="category-history">
+                <h2>History</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Category</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody"></tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+    <script src="chart.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
 </html>

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Report</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
     <link rel="stylesheet" href="report.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
         <nav class="sidebar">
             <div class="logo">
-                <h1>BudgetBuddy</h1>
+                <a style="text-decoration: none;" href="index.html"><h1>BudgetBuddy</h1></a>
                 <ul class="menu">
                     <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="budget.html">Budget</a></li>
-                    <li><a href="report.html" class="active">Report</a></li>
+                    <li><a href="budget.html">AI Support</a></li>
+                    <li><a href="tax_calculation.html">Tax Calculation</a></li>
                 </ul>
             </div>
-           
             <div class="sidebar-bottom">
                 <ul class="menu">
                     <li><a href="setting.html">Settings</a></li>
@@ -27,60 +28,61 @@
         </nav>
         <div class="main-content">
             <header>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search">
-                </div>
-                <div class="user-info">
-                    <span>Admin</span>
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </header>
-            <div class="report">
-                <h2>Expense Report</h2>
-                <div class="report-header">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search">
+            <section>
+                <h2>Tax Calculation</h2>
+                <form id="tax-form">
+                    <div class="form-group">
+                        <label for="income">Annual Income (₹):</label>
+                        <input type="number" id="income" required />
                     </div>
-                    <div class="actions">
-                        <button class="export">Export</button>
-                        <select>
-                            <option>January - April</option>
-                        </select>
+                    <div class="form-group">
+                        <label for="deductions">Deductions (₹):</label>
+                        <input type="number" id="deductions" required />
                     </div>
+                    <button type="submit">Calculate Tax</button>
+                </form>
+                <div id="result">
+                    <h3>Tax Calculation Result:</h3>
+                    <p>Taxable Income: ₹<span id="taxable-income"></span></p>
+                    <p>Tax Payable: ₹<span id="tax-payable"></span></p>
                 </div>
-                <div class="income-details">
-                    <h3>Income Details</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Total Income</th>
-                                <th>Total Expenses</th>
-                                <th>Calculated Balance</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>April 2024</td>
-                                <td>N210,000</td>
-                                <td>N110,000</td>
-                                <td>N100,000</td>
-                            </tr>
-                           
-                         
-                        </tbody>
-                    </table>
-                    <!-- <div class="pagination">
-                        <span>&laquo;</span>
-                        <span>1</span>
-                        <span>2</span>
-                        <span>3</span>
-                        <span>4</span>
-                        <span>5</span>
-                        <span>&raquo;</span>
-                    </div> -->
-                </div>
-            </div>
+                <h3>Tax Slabs</h3>
+                <table id="tax-slabs">
+                    <thead>
+                        <tr>
+                            <th>Income Range (₹)</th>
+                            <th>Tax Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0 - 2,50,000</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>2,50,001 - 5,00,000</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td>5,00,001 - 10,00,000</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>Above 10,00,000</td>
+                            <td>30%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </div>
     </div>
+    <script src="tax_calculation.js"></script>
+    <script src="report.js"></script>
 </body>
 </html>

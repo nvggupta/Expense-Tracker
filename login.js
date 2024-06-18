@@ -3,7 +3,9 @@ const LPassword = document.getElementById("Lpassword");
 const Lemail = document.getElementById("Lemail");
 const Lhide = document.getElementById("Lhide");
 const Lshow = document.getElementById("Lshow");
-login.addEventListener("click" , ()=>{
+login.addEventListener("click" , (e)=>{
+
+    e.preventDefault();
     if(!localStorage.getItem(Lemail.value))
       {
           alert("Email is Not Registered");
@@ -15,7 +17,8 @@ login.addEventListener("click" , ()=>{
                   alert("Enter Correct Password");
               }
           else{
-              alert("login Successfully");
+            console.log("logged in");
+            window.location.replace("dashboard.html");
           }    
       }    
 })
@@ -30,3 +33,4 @@ Lhide.addEventListener("click", () => {
     Lhide.classList.add("hide");
     Lshow.classList.remove("hide");
 });
+
