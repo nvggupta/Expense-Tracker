@@ -32,19 +32,3 @@ BudgetBuddy is a responsive and interactive dashboard application designed to he
 1. Clone the repository to your local machine:
    ```sh
    git clone https://github.com/yourusername/budgetbuddy.git
-budgetbuddy/
-├── index.html
-├── dashboard.html
-├── aisupport.html
-├── taxcalculation.html
-├── login.html
-├── style.css
-├── chart.js
-├── dashboard.js
-├── scripts.js
-├── images/
-│   ├── img1.jpg
-│   ├── img2.jpg
-│   ├── img3.jpg
-│   └── img4.jpg
-└── README.md
