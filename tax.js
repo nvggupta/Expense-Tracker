@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const sidebar = document.querySelector('.sidebar');
+
+    hamburgerMenu.addEventListener('click', function () {
+        sidebar.classList.toggle('open');
+    });
     const taxForm = document.getElementById('tax-form');
     const taxableIncomeEl = document.getElementById('taxable-income');
     const taxPayableEl = document.getElementById('tax-payable');

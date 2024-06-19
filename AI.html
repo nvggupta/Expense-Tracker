@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <link rel="stylesheet" href="AI.css">
+     
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar" id="sidebar">
+        <div class="logo">
+          <a style="text-decoration: none;" href="index.html"><h1>BudgetBuddy</h1></a>
+          <ul class="menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="AI.html">AI Support</a></li>
+            <li><a href="tax.html">Tax Calculation</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-bottom">
+          <ul class="menu">
+            <!-- <li><a href="setting.html">Settings</a></li> -->
+            <li><a href="login.html">Log out</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="main-content">
+        <header>
+          <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </header>
+        <div class="search-container">
+          <input type="text" id="input" placeholder="Ask something..." />
+          <button id="search">Search</button>
+        </div>
+        <div class="result" id="result">
+          <span class="question"></span>
+          <p class="answer"></p>
+        </div>
+      </div>
+    </div>
+    
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+      const API_KEY = "AIzaSyAZeV-QyHaxUWqEHmSvuS7YZ6SHf3j61l4";
+      const genAI = new GoogleGenerativeAI(API_KEY);
+      const search = document.getElementById("search");
+      const input = document.getElementById("input");
+      const result = document.getElementById("result");
+
+      async function run() {
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const prompt = input.value;
+        console.log(prompt);
+        const resultContent = await model.generateContent(prompt);
+        const response = await resultContent.response;
+        const markdownText = await response.text();
+        const text = marked.parse(markdownText);
+
+        result.style.display = "block";
+        result.querySelector(".question").innerText = prompt;
+        result.querySelector(".answer").innerHTML = text;
+      }
+
+      search.addEventListener("click", () => {
+        run();
+      });
+
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+      const sidebar = document.getElementById("sidebar");
+      hamburgerMenu.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

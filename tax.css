@@ -105,8 +105,41 @@ header {
     .hamburger-menu {
         display: flex;
     }
+    .sidebar.open {
+        display: block;
+    }
 }
+@media (max-width: 480px) {
+   
 
+    
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    .sidebar.open {
+        display: block;
+        height: 300px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    
+}
 .form-group {
     margin-bottom: 15px;
 }
