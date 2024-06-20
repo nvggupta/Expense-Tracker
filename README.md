@@ -35,5 +35,5 @@ BudgetBuddy is a responsive and interactive dashboard application designed to he
 
 ### screeshots
 
-![alt login]("D:\git_project\testing\expense_tracker\screenshots\home_page.png");
+![Login](screenshots/home_page.png)
    
