@@ -35,5 +35,10 @@ BudgetBuddy is a responsive and interactive dashboard application designed to he
 
 ### screeshots
 
-![Login](https://github.com/nvggupta/Expense-Tracker/blob/main/screenshots/Home_page.png))
-   
+![Home Page](https://github.com/nvggupta/Expense-Tracker/blob/main/screenshots/Home_page.png)
+![login](https://github.com/nvggupta/Expense-Tracker/blob/main/screenshots/login.png)   
+![signup](https://github.com/nvggupta/Expense-Tracker/blob/main/screenshots/signup.png)
+![dashboard](https://github.com/nvggupta/Expense-Tracker/blob/main/screenshots/dashboard1.png)
+![dashboard](https://github.com/nvggupta/Expense-Tracker/blob/main/screenshots/dashboard2.png)
+![AI](https://github.com/nvggupta/Expense-Tracker/blob/main/screenshots/AIsupport.png)
+![tax](https://github.com/nvggupta/Expense-Tracker/blob/main/screenshots/tAX.png)
